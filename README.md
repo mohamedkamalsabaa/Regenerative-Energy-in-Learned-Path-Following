@@ -38,32 +38,6 @@ tracking from 0.459 m to 0.314 m.
 
 ---
 
-## Reproducing the results
-
-### Option A - regenerate the figures only (seconds)
-
-Every figure in the paper is plotted from `figure_data.npz`, which contains
-the measured simulation arrays:
-
-```bash
-pip install -r requirements.txt
-python generate_figures.py
-```
-
-The script **does not synthesise data**. If `figure_data.npz` is absent it
-exits with an error rather than producing a plot.
-
-### Option B - full reproduction (~6 h on a quad-core CPU)
-
-Open `notebook.ipynb` and run all cells top to bottom. This trains the PPO
-policies (a 2x2 ablation, ten seeds, an energy-weight sweep, a curriculum
-ablation, and a dynamic-plant fine-tune) and executes every NMPC, LQR,
-PID-SF and Stanley experiment. The final cell writes `figure_data.npz`.
-
-For a ~10 min smoke test that exercises every code path with reduced
-budgets, set `FAST_TEST = True` in the training section.
-
----
 
 ## Environment note
 
