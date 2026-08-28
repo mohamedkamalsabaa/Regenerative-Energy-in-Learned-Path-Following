@@ -1,0 +1,23 @@
+# Core scientific stack
+numpy>=1.24             # NumPy 2.x works; see the casadi notes below
+scipy>=1.10
+matplotlib>=3.7
+
+# NMPC (optimal control)
+# CasADi 3.8 removed `casadi.tools.SX`, which do-mpc requires, so the
+# upper bound is mandatory. With NumPy >= 2 the `Inf` alias must also be
+# restored before importing do_mpc (the notebook does this automatically).
+casadi>=3.6,<3.8
+do-mpc>=4.6
+
+# Reinforcement learning
+gymnasium>=0.29
+stable-baselines3>=2.2
+torch>=2.0
+
+# Notebook execution
+jupyter
+ipykernel
+
+# Note: the JIT-compiled CasADi cell also requires a C compiler
+# (gcc/clang) available on the system PATH.
