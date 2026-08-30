@@ -26,7 +26,6 @@ tracking from 0.459 m to 0.314 m.
 .
 ├── notebook.ipynb          # Full study: run top-to-bottom to reproduce everything
 ├── generate_figures.py     # Plots all manuscript figures from figure_data.npz
-├── figure_data.npz         # Exported simulation arrays (lets you skip the full run)
 ├── requirements.txt
 ├── models/
 │   ├── ppo_pathfollow.zip      # Winner policy (preview + energy reward), seed 42
